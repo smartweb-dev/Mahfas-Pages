@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mahfas Investment Limited — real estate development and construction across Nigeria. Lagos, Abuja, Enugu." />
+  <meta name="description" content="Mahfas Investment Limited - construction, dredging, marine support, and real estate delivery across Nigeria." />
   <title>Mahfas Investment Limited | Real Estate & Construction</title>
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <!-- Bootstrap 5: base framework; Mahfas branding still comes from styles.css (loaded after). -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header" id="top">
-    <div class="header-inner">
+    <div class="container header-inner d-flex flex-nowrap align-items-center justify-content-between">
       <a href="#top" class="logo-link" aria-label="Mahfas Investment Limited home">
         <img src="assets/mahfas-logo.png" alt="Mahfas Investment Limited" class="logo-img" width="180" height="72" />
       </a>
@@ -28,9 +30,12 @@
           <li><a href="#about">About</a></li>
           <li><a href="#leadership">Leadership</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="#equipment">Equipment</a></li>
           <li><a href="#features">Why Us</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
+          <li class="nav-cta-wrap"><a href="#contact" class="btn btn-sm btn-primary nav-cta">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -41,14 +46,14 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
-        <p class="hero-eyebrow reveal" data-reveal>Real estate · Construction · Nigeria</p>
+        <p class="hero-eyebrow reveal" data-reveal>Construction / Dredging / Real Estate / Nigeria</p>
         <h1 id="hero-title" class="hero-title reveal" data-reveal>Building futures with precision and integrity</h1>
         <p class="hero-lead reveal" data-reveal>
-          Mahfas Investment Limited delivers exceptional developments and construction projects on time—powered by disciplined teams and modern systems.
+          Mahfas Investment Limited delivers real estate, construction, marine, and site development projects with disciplined teams, dependable equipment, and modern systems.
         </p>
-        <div class="hero-actions reveal" data-reveal>
-          <a href="#contact" class="btn btn-primary">Start a project</a>
-          <a href="#services" class="btn btn-outline">Explore services</a>
+        <div class="hero-actions reveal d-flex flex-wrap gap-3" data-reveal>
+          <a href="#contact" class="btn btn-lg btn-primary px-4">Start a project</a>
+          <a href="#services" class="btn btn-lg btn-outline-light px-4">Explore services</a>
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -61,26 +66,62 @@
       <div class="container">
         <div class="section-head reveal" data-reveal>
           <span class="section-label">About us</span>
-          <h2 id="about-title" class="section-title">Established expertise across Nigeria</h2>
+          <h2 id="about-title" class="section-title">Integrated delivery across construction, marine works, and real estate</h2>
         </div>
-        <div class="about-grid">
-          <div class="about-copy reveal" data-reveal>
+        <div class="row g-4 align-items-stretch about-grid">
+          <div class="col-12 col-xl-8">
+            <div class="about-copy reveal" data-reveal>
             <p class="lead">
-              Mahfas Investment Limited is a real estate development and construction company headquartered in Lagos, with branches across Nigeria. We handle real estate and construction projects to meet client expectations and satisfaction within agreed timelines—supported by our computerized systems and highly trained workforce.
+              Mahfas Investment Limited is a real estate development and construction company headquartered in Lagos, with branches across Nigeria. We deliver residential, commercial, marine, and infrastructure projects with disciplined teams, dependable equipment, and modern systems.
             </p>
             <p>
-              Our experienced, disciplined management team is capable of delivering every target to make each project a success. From residential estates to commercial builds, we combine technical rigor with clear communication at every stage.
+              Alongside our construction and development services, our capabilities span land reclamation, channel clearing, shoreline protection, hydrographic support, sand stockpiling, and site development for private, corporate, and government clients. Every engagement is shaped around quality standards, cost effectiveness, and clear communication from planning through handover.
             </p>
             <ul class="about-stats">
-              <li><strong>Lagos</strong> head office &amp; Lekki presence</li>
-              <li><strong>Abuja</strong> area &amp; site offices</li>
-              <li><strong>Enugu</strong> regional office</li>
+              <li><strong>Lagos</strong> head office and Lekki project presence</li>
+              <li><strong>Abuja</strong> legislative quarters and site operations</li>
+              <li><strong>Enugu</strong> regional office and delivery footprint</li>
             </ul>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 vision-grid">
+              <div class="col">
+                <article class="vision-card h-100">
+                  <h3>Vision</h3>
+                  <p>To be the long-term partner of choice and an industry leader for dependable turnkey solutions.</p>
+                </article>
+              </div>
+              <div class="col">
+                <article class="vision-card h-100">
+                  <h3>Mission</h3>
+                  <p>To exceed client expectations with best-practice execution, capable equipment, and value-driven delivery.</p>
+                </article>
+              </div>
+              <div class="col">
+                <article class="vision-card h-100">
+                  <h3>Core values</h3>
+                  <p>Integrity, professional competence, safety, high quality standards, and cost effectiveness.</p>
+                </article>
+              </div>
+            </div>
+            <ul class="about-highlights">
+              <li>Wholly indigenous company with nationwide project reach</li>
+              <li>Strategic alliances with industry professionals and public-sector stakeholders</li>
+              <li>Focused on timely execution backed by trained crews and computerized systems</li>
+              <li>Experienced in residential estates, commercial builds, and specialized marine support projects</li>
+            </ul>
+            </div>
           </div>
-          <div class="about-card reveal" data-reveal>
+          <div class="col-12 col-xl-4 d-flex">
+            <div class="about-card reveal h-100 w-100" data-reveal>
             <div class="about-card-inner">
               <img src="assets/mahfas-logo.png" alt="" class="about-logo-mark" width="120" height="48" />
-              <p class="about-card-quote">“Quality delivery, on schedule—every time.”</p>
+              <p class="about-card-quote">"Turnkey solutions delivered with integrity, safety, and precision."</p>
+              <ul class="about-card-list">
+                <li>Land reclamation</li>
+                <li>Channel clearing</li>
+                <li>Sand filling</li>
+                <li>Marine support works</li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
@@ -92,58 +133,58 @@
         <div class="section-head reveal" data-reveal>
           <span class="section-label">Our team</span>
           <h2 id="leadership-title" class="section-title">Leadership</h2>
-          <p class="section-sub">Directors and executives guiding Mahfas Investment Limited across Nigeria.</p>
+          <p class="section-sub">Experienced executives and technical leaders guiding delivery across construction, dredging, and real estate operations.</p>
         </div>
-        <div class="leadership-grid">
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
+        <div class="row g-3 g-lg-4 align-items-stretch leadership-grid">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
             <p class="exec-name">AIG (Rtd.) Majid Bello</p>
             <p class="exec-role">Chairman</p>
-          </article>
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
-            <p class="exec-name">Alh. Salau Sule</p>
+            <p class="exec-bio">Provides board-level oversight, governance, and strategic leadership for sustainable growth.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
+            <p class="exec-name">Alh. Engr. Dr. Sule Salau (CFIAR)</p>
             <p class="exec-role">GMD / CEO</p>
-          </article>
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
+            <p class="exec-bio">Leads enterprise direction, partnerships, and delivery strategy across Mahfas business units.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
             <p class="exec-name">Hajia Fatima Salau</p>
             <p class="exec-role">Director / COO</p>
-          </article>
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
+            <p class="exec-bio">Oversees operations, coordination, and internal systems that keep projects moving on time.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
             <p class="exec-name">Engr. Nasiru Ozigi</p>
             <p class="exec-role">Managing Director</p>
-          </article>
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
+            <p class="exec-bio">Drives execution standards across technical planning, field operations, and project performance.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
             <p class="exec-name">Engr. Oluwatobi Salau</p>
             <p class="exec-role">Director</p>
-          </article>
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
+            <p class="exec-bio">Supports engineering delivery and client-facing execution across multidisciplinary project scopes.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
             <p class="exec-name">Engr. Ahmed Salau</p>
             <p class="exec-role">Director</p>
-          </article>
-          <article class="exec-card reveal" data-reveal>
-            <div class="exec-photo">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" alt="" width="120" height="120" loading="lazy" />
-            </div>
+            <p class="exec-bio">Contributes technical oversight with a focus on operational readiness and site coordination.</p>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex">
+            <article class="exec-card reveal h-100 w-100" data-reveal>
             <p class="exec-name">Mr. Sule Oluwaseyi</p>
             <p class="exec-role">Director</p>
-          </article>
+            <p class="exec-bio">Supports business development, project administration, and stakeholder engagement.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -153,37 +194,247 @@
         <div class="section-head reveal" data-reveal>
           <span class="section-label">What we do</span>
           <h2 id="services-title" class="section-title">Services</h2>
-          <p class="section-sub">End-to-end support for developments that stand the test of time.</p>
+          <p class="section-sub">A combined view of Mahfas' core construction services and specialized marine infrastructure capabilities.</p>
         </div>
-        <div class="services-grid">
-          <article class="service-card reveal" data-reveal>
+        <div class="row g-4 align-items-stretch services-grid">
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4"/></svg>
             </div>
             <h3 class="service-title">Real estate development</h3>
-            <p>Residential and commercial projects from concept through handover, aligned with your investment goals.</p>
-          </article>
-          <article class="service-card reveal" data-reveal>
+            <p>Residential and commercial developments from concept through handover, aligned with client and investment goals.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l9 4.5v6c0 5-3.5 9.5-9 11-5.5-1.5-9-6-9-11v-6L12 3z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3 class="service-title">Construction management</h3>
-            <p>Site coordination, quality control, and scheduling so milestones are met without compromise.</p>
-          </article>
-          <article class="service-card reveal" data-reveal>
+            <p>Site coordination, quality control, and disciplined scheduling to keep project milestones on track.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg>
             </div>
             <h3 class="service-title">Project planning</h3>
-            <p>Structured planning and transparent reporting—so you always know where your project stands.</p>
-          </article>
-          <article class="service-card reveal" data-reveal>
+            <p>Structured planning, documentation, and transparent reporting so clients always know where work stands.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
             </div>
             <h3 class="service-title">Timely delivery</h3>
-            <p>Systems-driven workflows and disciplined teams focused on deadlines and client satisfaction.</p>
-          </article>
+            <p>Systems-driven workflows and trained teams focused on deadlines, client satisfaction, and dependable handover.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19h16"/><path d="M5 16c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 2 0"/><path d="M7 13l3-5 4 2 3-4"/></svg>
+            </div>
+            <h3 class="service-title">Sand stock piling</h3>
+            <p>Hydraulic marine sand supply for roads, bridges, concrete works, housing projects, and commercial stockyards.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18h18"/><path d="M6 18V9l6-4 6 4v9"/><path d="M10 18v-3h4v3"/></svg>
+            </div>
+            <h3 class="service-title">Sand filling</h3>
+            <p>Fast, equipment-backed filling operations using the right CSD and booster setup to meet project deadlines.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18"/><path d="M6 8l3 4-3 4"/><path d="M18 8l-3 4 3 4"/></svg>
+            </div>
+            <h3 class="service-title">Channel clearing</h3>
+            <p>Deepening, widening, maintenance dredging, and removal of blockage in channels, harbors, and waterways.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 19h18"/><path d="M6 14h12"/><path d="M8 14V8l4-3 4 3v6"/><path d="M12 11v8"/></svg>
+            </div>
+            <h3 class="service-title">Dredging</h3>
+            <p>Capital and maintenance dredging services for waterways, channels, and coastal zones using capable CSD assets and trained marine crews.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18"/><path d="M5 9c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 4-2"/><path d="M5 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 4-2"/></svg>
+            </div>
+            <h3 class="service-title">Land reclamation</h3>
+            <p>Site investigation, survey support, and reclamation works that turn coastal or waterlogged terrain into usable land.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18c2-4 5-6 8-6s6 2 8 6"/><path d="M6 14V7l6-3 6 3v7"/><path d="M9 10h6"/></svg>
+            </div>
+            <h3 class="service-title">Shoreline protection and survey</h3>
+            <p>Support for shoreline defense, hydrographic survey, and marine planning with safety and precision at the core.</p>
+          </article></div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 d-flex"><article class="service-card reveal h-100 w-100" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 19l7-14 7 14"/><path d="M8.5 12h7"/><path d="M3 19h18"/></svg>
+            </div>
+            <h3 class="service-title">Forest and wetland clearing</h3>
+            <p>Thick bush, swamp, and wetland clearing using specialized equipment to prepare difficult terrain for development.</p>
+          </article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-equipment" id="equipment" aria-labelledby="equipment-title">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="section-label">Technical capacity</span>
+          <h2 id="equipment-title" class="section-title">Our equipment</h2>
+          <p class="section-sub">Dredging assets, marine plant, and field support equipment from our operations. The first nine photos load immediately; choose <strong>See more</strong> to open the rest of the gallery.</p>
+        </div>
+
+        <div class="row g-3 g-md-4 equipment-gallery">
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/ChatGPT%20Image%20Apr%2022%2C%202026%2C%2012_58_52%20PM.png" alt="Mahfas marine and dredging equipment, photo 1 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_generated.png" alt="Mahfas marine and dredging equipment, photo 3 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+           <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_yvj2gbyvj2gbyvj2.png" alt="Mahfas marine and dredging equipment, photo 3 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/ChatGPT%20Image%20Apr%2022%2C%202026%2C%2012_58_56%20PM.png" alt="Mahfas marine and dredging equipment, photo 2 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_22v2qy22v2qy22v2.png" alt="Mahfas marine and dredging equipment, photo 3 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/cleandreg.png" alt="Mahfas marine and dredging equipment, photo 3 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_2qlq1k2qlq1k2qlq.png" alt="Mahfas marine and dredging equipment, photo 4 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_3u8me53u8me53u8m.png" alt="Mahfas marine and dredging equipment, photo 5 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_98i84998i84998i8.png" alt="Mahfas marine and dredging equipment, photo 6 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_9plecb9plecb9ple.png" alt="Mahfas marine and dredging equipment, photo 7 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_9q6rzq9q6rzq9q6r.png" alt="Mahfas marine and dredging equipment, photo 8 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card reveal h-100 mb-0" data-reveal>
+              <div class="equipment-photo-frame">
+                <img src="assets/equipment/Gemini_Generated_Image_a347fna347fna347.png" alt="Mahfas marine and dredging equipment, photo 9 of 17" class="equipment-photo-img" width="960" height="720" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row g-3 g-md-4 equipment-gallery-more mt-3 mt-md-4" id="equipment-gallery-more" hidden>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_bdj7sgbdj7sgbdj7.png" alt="Mahfas marine and dredging equipment, photo 10 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_bvews9bvews9bvew.png" alt="Mahfas marine and dredging equipment, photo 11 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_eiusixeiusixeius.png" alt="Mahfas marine and dredging equipment, photo 12 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_fz2a9zfz2a9zfz2a.png" alt="Mahfas marine and dredging equipment, photo 13 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_jjae40jjae40jjae.png" alt="Mahfas marine and dredging equipment, photo 14 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_kczxyxkczxyxkczx.png" alt="Mahfas marine and dredging equipment, photo 15 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_q8ocopq8ocopq8oc.png" alt="Mahfas marine and dredging equipment, photo 16 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="equipment-photo-card equipment-photo-card--deferred h-100 mb-0">
+              <div class="equipment-photo-frame">
+                <img data-src="assets/equipment/Gemini_Generated_Image_y4nacty4nacty4na.png" alt="Mahfas marine and dredging equipment, photo 17 of 17" class="equipment-photo-img equipment-photo-img--deferred" width="960" height="720" decoding="async" />
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 reveal" data-reveal>
+          <button type="button" class="btn btn-primary btn-lg px-4" id="equipment-see-more" aria-controls="equipment-gallery-more" aria-expanded="false">See more</button>
         </div>
       </div>
     </section>
@@ -195,32 +446,32 @@
           <h2 id="features-title" class="section-title">Built on discipline, systems, and trust</h2>
         </div>
         <div class="features-list">
-          <div class="feature-row reveal" data-reveal>
-            <span class="feature-num">01</span>
-            <div>
+          <div class="row align-items-start gx-md-4 gy-2 py-4 mx-0 border-bottom feature-row reveal" data-reveal>
+            <div class="col-12 col-md-auto"><span class="feature-num">01</span></div>
+            <div class="col-12 col-md">
               <h3 class="feature-title">Experienced management</h3>
-              <p>Leadership with a track record of delivering complex projects across multiple regions.</p>
+              <p class="mb-0">Leadership and consultants with cross-sector experience in real estate, construction, dredging, and infrastructure delivery.</p>
             </div>
           </div>
-          <div class="feature-row reveal" data-reveal>
-            <span class="feature-num">02</span>
-            <div>
+          <div class="row align-items-start gx-md-4 gy-2 py-4 mx-0 border-bottom feature-row reveal" data-reveal>
+            <div class="col-12 col-md-auto"><span class="feature-num">02</span></div>
+            <div class="col-12 col-md">
               <h3 class="feature-title">Computerized systems</h3>
-              <p>Modern tools for scheduling, documentation, and communication—fewer surprises, clearer outcomes.</p>
+              <p class="mb-0">Modern tools for scheduling, documentation, and communication so project performance stays visible and expectations stay aligned.</p>
             </div>
           </div>
-          <div class="feature-row reveal" data-reveal>
-            <span class="feature-num">03</span>
-            <div>
+          <div class="row align-items-start gx-md-4 gy-2 py-4 mx-0 border-bottom feature-row reveal" data-reveal>
+            <div class="col-12 col-md-auto"><span class="feature-num">03</span></div>
+            <div class="col-12 col-md">
               <h3 class="feature-title">Trained workforce</h3>
-              <p>Skilled teams on site who take safety and craftsmanship seriously.</p>
+              <p class="mb-0">Skilled site and marine crews who prioritize safety, craftsmanship, accuracy, and disciplined execution.</p>
             </div>
           </div>
-          <div class="feature-row reveal" data-reveal>
-            <span class="feature-num">04</span>
-            <div>
+          <div class="row align-items-start gx-md-4 gy-2 py-4 mx-0 feature-row reveal" data-reveal>
+            <div class="col-12 col-md-auto"><span class="feature-num">04</span></div>
+            <div class="col-12 col-md">
               <h3 class="feature-title">Nationwide presence</h3>
-              <p>Head office in Lagos with offices in Abuja and Enugu—local knowledge where you need it.</p>
+              <p class="mb-0">Head office in Lagos with operational reach into Abuja and Enugu for responsive delivery where needed.</p>
             </div>
           </div>
         </div>
@@ -233,19 +484,19 @@
           <span class="section-label">Testimonials</span>
           <h2 id="testimonials-title" class="section-title">What clients say</h2>
         </div>
-        <div class="testimonials-grid">
-          <blockquote class="testimonial reveal" data-reveal>
-            <p>“Professional from first meeting to completion. Communication was clear and the team stayed focused on our timeline.”</p>
-            <footer>— Private investor, Lagos</footer>
-          </blockquote>
-          <blockquote class="testimonial reveal" data-reveal>
-            <p>“We valued their structured approach and attention to detail on our estate development. Delivered as promised.”</p>
-            <footer>— Development partner, Abuja</footer>
-          </blockquote>
-          <blockquote class="testimonial reveal" data-reveal>
-            <p>“Mahfas brought discipline and skilled crews to a challenging site. We would work with them again.”</p>
-            <footer>— Commercial client, South West</footer>
-          </blockquote>
+        <div class="row g-4 align-items-stretch testimonials-grid">
+          <div class="col-12 col-md-6 col-xl-4 d-flex"><blockquote class="testimonial reveal h-100 w-100" data-reveal>
+            <p>"Professional from first meeting to completion. Communication was clear and the team stayed focused on our timeline."</p>
+            <footer>- Private investor, Lagos</footer>
+          </blockquote></div>
+          <div class="col-12 col-md-6 col-xl-4 d-flex"><blockquote class="testimonial reveal h-100 w-100" data-reveal>
+            <p>"We valued their structured approach and attention to detail on our estate development. Delivered as promised."</p>
+            <footer>- Development partner, Abuja</footer>
+          </blockquote></div>
+          <div class="col-12 col-md-6 col-xl-4 d-flex"><blockquote class="testimonial reveal h-100 w-100" data-reveal>
+            <p>"Mahfas brought discipline and skilled crews to a challenging site. We would work with them again."</p>
+            <footer>- Commercial client, South West</footer>
+          </blockquote></div>
         </div>
       </div>
     </section>
@@ -261,92 +512,107 @@
          - message     (maps from the "Message" field)
          Optionally add {{reply_to}} = {{from_email}} in the template "Reply To" field.
       4. Copy your Template ID from the template list.
-      5. In Account → API Keys, copy your Public Key (not the private key).
+      5. In Account -> API Keys, copy your Public Key (not the private key).
 
       Then open script.js and set:
-      - EMAILJS_PUBLIC_KEY  → your Public Key
-      - EMAILJS_SERVICE_ID  → your Email Service ID
-      - EMAILJS_TEMPLATE_ID → your Template ID
+      - EMAILJS_PUBLIC_KEY  -> your Public Key
+      - EMAILJS_SERVICE_ID  -> your Email Service ID
+      - EMAILJS_TEMPLATE_ID -> your Template ID
     -->
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-layout">
-        <div class="contact-intro reveal" data-reveal>
-          <span class="section-label">Contact</span>
-          <h2 id="contact-title" class="section-title">Let’s talk about your next project</h2>
-          <p class="contact-lead">Reach us by phone, email, or the form—we respond as soon as we can.</p>
+      <div class="container">
+        <div class="row g-4 gy-lg-5 align-items-start contact-layout">
+          <div class="col-12 col-lg-6">
+            <div class="contact-intro reveal" data-reveal>
+            <span class="section-label">Contact</span>
+            <h2 id="contact-title" class="section-title">Let's talk about your next project</h2>
+            <p class="contact-lead">Reach us by phone, email, or the form. We respond as quickly as possible.</p>
 
-          <div class="contact-block">
-            <h3 class="contact-block-title">Phone</h3>
-            <ul class="contact-list">
-              <li><a href="tel:+2348096232288">0809 623 2288</a></li>
-              <li><a href="tel:+2347057776775">0705 777 6775</a></li>
-              <li><a href="tel:+2347032232911">0703 223 2911</a></li>
-              <li><a href="tel:+2348027113568">0802 711 3568</a></li>
-            </ul>
+            <div class="contact-block">
+              <h3 class="contact-block-title">Phone</h3>
+              <ul class="contact-list">
+                <li><a href="tel:+2348096232288">0809 623 2288</a></li>
+                <li><a href="tel:+2347057776775">0705 777 6775</a></li>
+                <li><a href="tel:+2347032232911">0703 223 2911</a></li>
+                <li><a href="tel:+2348027113568">0802 711 3568</a></li>
+              </ul>
+            </div>
+            <div class="contact-block">
+              <h3 class="contact-block-title">Email</h3>
+              <ul class="contact-list">
+                <li><a href="mailto:mahfasinvltdabuja@gmail.com">mahfasinvltdabuja@gmail.com</a></li>
+                <li><a href="mailto:mahfasinvltd@yahoo.com">mahfasinvltd@yahoo.com</a></li>
+              </ul>
+            </div>
+            <div class="contact-block">
+              <h3 class="contact-block-title">Offices</h3>
+              <ul class="address-list">
+                <li><strong>Head office:</strong> 27, CMD Road, Shangisha Junc. (Magodo) Ikosi Ketu, Lagos.</li>
+                <li><strong>Lagos:</strong> Green Park Housing Estate, Abijo Lekki, Lagos State.</li>
+                <li><strong>Abuja (area):</strong> No 41 Dennis Osadebe Crescent, National Assembly Quarters Zone A Apo, Abuja.</li>
+                <li><strong>Abuja (site):</strong> FMBM Mega Mini City Estate, Kuje Sauka Extension, beside Centenary City, Airport Road, Abuja.</li>
+                <li><strong>Enugu:</strong> Coal City View Estate, Ugwu Onyeama, Ozalla Abor, by Enugu-Onitsha Expressway, Enugu State.</li>
+              </ul>
+            </div>
+            </div>
           </div>
-          <div class="contact-block">
-            <h3 class="contact-block-title">Email</h3>
-            <ul class="contact-list">
-              <li><a href="mailto:mahfasinvltdabuja@gmail.com">mahfasinvltdabuja@gmail.com</a></li>
-              <li><a href="mailto:mahfasinvltd@yahoo.com">mahfasinvltd@yahoo.com</a></li>
-            </ul>
-          </div>
-          <div class="contact-block">
-            <h3 class="contact-block-title">Offices</h3>
-            <ul class="address-list">
-              <li><strong>Head office:</strong> 27, CMD Road, Shangisha Junc. (Magodo) Ikosi Ketu, Lagos.</li>
-              <li><strong>Lagos:</strong> Green Park Housing Estate, Abijo Lekki, Lagos State.</li>
-              <li><strong>Abuja (area):</strong> No 41 Dennis Osadebe Crescent, National Assembly Quarters Zone A Apo, Abuja.</li>
-              <li><strong>Abuja (site):</strong> FMBM Mega Mini City Estate, Kuje Sauka Extension, beside Centenary City, Airport Road, Abuja.</li>
-              <li><strong>Enugu:</strong> Coal City View Estate, Ugwu Onyeama, Ozalla Abor, by Enugu-Onitsha Expressway, Enugu State.</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="contact-form-wrap reveal" data-reveal>
-          <form class="contact-form" id="contact-form">
-            <div class="form-alert" id="form-status" role="status" aria-live="polite" hidden></div>
-            <label class="form-field">
-              <span>Name</span>
-              <input type="text" name="from_name" id="from_name" required autocomplete="name" maxlength="120" placeholder="Your full name" />
-            </label>
-            <label class="form-field">
-              <span>Email</span>
-              <input type="email" name="from_email" id="from_email" required autocomplete="email" maxlength="254" placeholder="you@example.com" />
-            </label>
-            <label class="form-field">
-              <span>Message</span>
-              <textarea name="message" id="message" required rows="5" minlength="5" maxlength="5000" placeholder="Tell us about your project…"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-              <span class="btn-text">Send message</span>
-              <span class="btn-loading" hidden>
-                <span class="spinner" aria-hidden="true"></span>
-                Sending…
-              </span>
-            </button>
-          </form>
+          <div class="col-12 col-lg-6 d-flex">
+            <div class="contact-form-wrap reveal w-100" data-reveal>
+            <form class="contact-form" id="contact-form">
+              <div class="form-alert" id="form-status" role="status" aria-live="polite" hidden></div>
+              <label class="form-field mb-3 w-100">
+                <span class="form-label">Name</span>
+                <input class="form-control" type="text" name="from_name" id="from_name" required autocomplete="name" maxlength="120" placeholder="Your full name" />
+              </label>
+              <label class="form-field mb-3 w-100">
+                <span class="form-label">Email</span>
+                <input class="form-control" type="email" name="from_email" id="from_email" required autocomplete="email" maxlength="254" placeholder="you@example.com" />
+              </label>
+              <label class="form-field mb-3 w-100">
+                <span class="form-label">Message</span>
+                <textarea class="form-control" name="message" id="message" required rows="5" minlength="5" maxlength="5000" placeholder="Tell us about your project..."></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary btn-lg w-100" id="submit-btn">
+                <span class="btn-text">Send message</span>
+                <span class="btn-loading" hidden>
+                  <span class="spinner" aria-hidden="true"></span>
+                  Sending...
+                </span>
+              </button>
+            </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/mahfas-logo.png" alt="" width="160" height="64" loading="lazy" />
-        <p>Real estate development and construction across Nigeria.</p>
+    <div class="container">
+      <div class="row gy-4 align-items-center footer-inner">
+        <div class="col-12 col-md-4 text-center text-md-start footer-brand">
+          <img class="mx-auto mx-md-0 d-block" src="assets/mahfas-logo.png" alt="" width="160" height="64" loading="lazy" />
+          <p>Real estate development, construction, and marine project delivery across Nigeria.</p>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end gap-3">
+            <a href="#about">About</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#services">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <p class="footer-copy mb-0">&copy; <span id="year"></span> Mahfas Investment Limited. All rights reserved.</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <p class="footer-copy">&copy; <span id="year"></span> Mahfas Investment Limited. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>

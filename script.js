@@ -1,17 +1,17 @@
 /**
- * Mahfas Investment Limited — site behavior
+ * Mahfas Investment Limited - site behavior
  *
- * EMAILJS — replace these three values after creating your EmailJS account:
+ * EMAILJS - replace these three values after creating your EmailJS account:
  * -------------------------------------------------------------------------
- * 1. PUBLIC KEY:  EmailJS Dashboard → Account → API Keys → Public Key
- * 2. SERVICE ID:  Email Services → your service → Service ID
- * 3. TEMPLATE ID: Email Templates → your template → Template ID
+ * 1. PUBLIC KEY:  EmailJS Dashboard -> Account -> API Keys -> Public Key
+ * 2. SERVICE ID:  Email Services -> your service -> Service ID
+ * 3. TEMPLATE ID: Email Templates -> your template -> Template ID
  *
  * Your EmailJS template should use these variable names (or update send() below):
  *   {{from_name}}, {{from_email}}, {{message}}
  */
 
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_PUBLIC_KEY = "w7JBp0uUCxeaCyaRO";
 const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
@@ -28,7 +28,6 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  /* Sticky header shadow */
   function onScrollHeader() {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -37,7 +36,6 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   onScrollHeader();
 
-  /* Mobile navigation */
   function setNavOpen(open) {
     if (!header || !navToggle) return;
     header.classList.toggle("nav-open", open);
@@ -58,13 +56,12 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
     });
 
     window.addEventListener("resize", function () {
-      if (window.matchMedia("(min-width: 768px)").matches) {
+      if (window.matchMedia("(min-width: 1100px)").matches) {
         setNavOpen(false);
       }
     });
   }
 
-  /* Smooth scroll: native CSS handles behavior; offset for fixed header on programmatic jump optional */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       const id = this.getAttribute("href");
@@ -78,7 +75,6 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
     });
   });
 
-  /* Fade-in on scroll */
   const revealEls = document.querySelectorAll("[data-reveal]");
   if (revealEls.length && "IntersectionObserver" in window) {
     const io = new IntersectionObserver(
@@ -92,6 +88,7 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
       },
       { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
     );
+
     revealEls.forEach(function (el) {
       io.observe(el);
     });
@@ -101,7 +98,6 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
     });
   }
 
-  /* EmailJS contact form */
   const form = document.getElementById("contact-form");
   const statusEl = document.getElementById("form-status");
   const submitBtn = document.getElementById("submit-btn");
@@ -115,19 +111,23 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
   function setFormStatus(message, type) {
     if (!statusEl) return;
+
     statusEl.classList.remove(
       "form-alert--success",
       "form-alert--warning",
       "form-alert--error"
     );
+
     if (!message) {
       statusEl.textContent = "";
       statusEl.hidden = true;
       statusEl.removeAttribute("role");
       return;
     }
+
     statusEl.hidden = false;
     statusEl.textContent = message;
+
     if (type === "success") {
       statusEl.classList.add("form-alert--success");
       statusEl.setAttribute("role", "status");
@@ -156,24 +156,29 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
       nameInput.setCustomValidity("Please enter your name.");
       return false;
     }
+
     if (!email) {
       emailInput.setCustomValidity("Please enter your email address.");
       return false;
     }
+
     if (!EMAIL_RE.test(email)) {
       emailInput.setCustomValidity("Please enter a valid email address.");
       return false;
     }
+
     if (!msg) {
       messageInput.setCustomValidity("Please enter your message.");
       return false;
     }
+
     if (msg.length < 5) {
       messageInput.setCustomValidity(
         "Please enter at least 5 characters in your message."
       );
       return false;
     }
+
     return true;
   }
 
@@ -221,7 +226,7 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
           "EmailJS: set EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, and EMAILJS_TEMPLATE_ID in script.js."
         );
         setFormStatus(
-          "We couldn’t send your message from this form. Please call or email us directly—we’re happy to help.",
+          "We couldn't send your message from this form. Please call or email us directly - we're happy to help.",
           "warning"
         );
         return;
@@ -239,7 +244,7 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
         .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
         .then(function () {
           setFormStatus(
-            "Thank you — your message was sent. We will get back to you soon.",
+            "Thank you - your message was sent. We will get back to you soon.",
             "success"
           );
           form.reset();
@@ -260,15 +265,119 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       setFormStatus("", null);
+
       if (!validateTrimmedFields()) {
         form.reportValidity();
         return;
       }
+
       console.error("EmailJS: script failed to load from CDN.");
       setFormStatus(
-        "We couldn’t send your message from this form. Please call or email us directly—we’re happy to help.",
+        "We couldn't send your message from this form. Please call or email us directly - we're happy to help.",
         "warning"
       );
     });
+  }
+
+  /* Equipment gallery: first 9 images in markup; remaining load on "See more" */
+  const equipmentMoreBtn = document.getElementById("equipment-see-more");
+  const equipmentMore = document.getElementById("equipment-gallery-more");
+  if (equipmentMoreBtn && equipmentMore) {
+    const deferredImgs = equipmentMore.querySelectorAll("img.equipment-photo-img--deferred[data-src]");
+
+    function loadDeferredImages() {
+      deferredImgs.forEach(function (img) {
+        var url = img.getAttribute("data-src");
+        if (!url) return;
+        img.setAttribute("src", url);
+        img.removeAttribute("data-src");
+        img.classList.remove("equipment-photo-img--deferred");
+        img.setAttribute("loading", "lazy");
+        img.addEventListener(
+          "load",
+          function onImgLoad() {
+            img.classList.add("is-loaded");
+            img.removeEventListener("load", onImgLoad);
+          },
+          { once: true }
+        );
+        img.addEventListener(
+          "error",
+          function onImgErr() {
+            img.classList.add("is-loaded");
+            img.removeEventListener("error", onImgErr);
+          },
+          { once: true }
+        );
+        if (img.complete && img.naturalWidth) {
+          img.classList.add("is-loaded");
+        }
+      });
+    }
+
+    equipmentMoreBtn.addEventListener("click", function () {
+      var expanded = equipmentMoreBtn.getAttribute("aria-expanded") === "true";
+      if (!expanded) {
+        loadDeferredImages();
+        equipmentMore.removeAttribute("hidden");
+        equipmentMoreBtn.setAttribute("aria-expanded", "true");
+        equipmentMoreBtn.textContent = "Show less";
+        equipmentMore.querySelectorAll(".equipment-photo-card--deferred").forEach(function (card) {
+          card.classList.add("is-visible");
+        });
+      } else {
+        equipmentMore.setAttribute("hidden", "");
+        equipmentMoreBtn.setAttribute("aria-expanded", "false");
+        equipmentMoreBtn.textContent = "See more";
+      }
+    });
+  }
+
+  /* Projects page: filter gallery by category */
+  const projectFilterBar = document.getElementById("project-gallery-filters");
+  const projectGalleryGrid = document.getElementById("project-gallery-grid");
+  if (projectFilterBar && projectGalleryGrid) {
+    const filterButtons = projectFilterBar.querySelectorAll("[data-project-filter]");
+    const galleryItems = projectGalleryGrid.querySelectorAll(".project-gallery-item[data-project-category]");
+    const statusEl = document.getElementById("project-gallery-status");
+
+    function applyProjectFilter(filter) {
+      var visible = 0;
+      galleryItems.forEach(function (item) {
+        var cat = item.getAttribute("data-project-category") || "";
+        var show = filter === "all" || cat === filter;
+        item.classList.toggle("d-none", !show);
+        if (show) visible += 1;
+      });
+
+      filterButtons.forEach(function (btn) {
+        var key = btn.getAttribute("data-project-filter") || "all";
+        var active = key === filter;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      if (statusEl) {
+        if (filter === "all") {
+          statusEl.textContent =
+            "Showing all project photographs: " + visible + " images across residential, dredging, and active sites.";
+        } else {
+          statusEl.textContent =
+            "Showing " +
+            visible +
+            " photograph" +
+            (visible === 1 ? "" : "s") +
+            " in the selected portfolio view.";
+        }
+      }
+    }
+
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyProjectFilter(btn.getAttribute("data-project-filter") || "all");
+      });
+    });
+
+    applyProjectFilter("all");
   }
 })();
