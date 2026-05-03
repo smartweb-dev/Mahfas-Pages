@@ -127,6 +127,16 @@ a:hover {
   gap: 1rem;
 }
 
+/* Navbar: full viewport width + 0.5rem side inset only.
+   (Global `.container` max-width + auto margins were centering a ~1120px strip,
+   which looked like huge left/right padding on large screens.) */
+.site-header .container {
+  max-width: none;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .logo-link {
   flex-shrink: 0;
 }
@@ -135,6 +145,13 @@ a:hover {
   height: 72px;
   width: auto;
   object-fit: contain;
+}
+
+/* Slightly larger mark on tablet and phone (desktop ≥1100px stays at 72px). */
+@media (max-width: 1099px) and (min-width: 640px) {
+  .logo-img {
+    height: 76px;
+  }
 }
 
 .nav-toggle {
@@ -412,7 +429,7 @@ a:hover {
 
 @media (max-width: 639px) {
   .logo-img {
-    height: 60px;
+    height: 68px;
   }
 
   .hero {
