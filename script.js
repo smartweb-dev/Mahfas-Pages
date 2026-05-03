@@ -69,7 +69,9 @@ const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
       const target = document.querySelector(id);
       if (target) {
         e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - 72;
+        var headerRaw = getComputedStyle(document.documentElement).getPropertyValue("--header-height");
+        var headerOffset = parseInt(headerRaw, 10) || 88;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
         window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
       }
     });

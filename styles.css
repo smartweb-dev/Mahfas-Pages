@@ -34,7 +34,7 @@
   --shadow-nav: 0 4px 24px rgba(13, 27, 62, 0.08);
   --transition-fast: 0.2s ease;
   --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --header-height: 72px;
+  --header-height: 88px;
   --max-width: 1120px;
 }
 
@@ -132,7 +132,7 @@ a:hover {
 }
 
 .logo-img {
-  height: 52px;
+  height: 72px;
   width: auto;
   object-fit: contain;
 }
@@ -412,7 +412,7 @@ a:hover {
 
 @media (max-width: 639px) {
   .logo-img {
-    height: 44px;
+    height: 60px;
   }
 
   .hero {
